@@ -1,27 +1,17 @@
-<nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-      <motion.div 
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-        className="flex items-center gap-2 px-4 py-3 bg-white/80 backdrop-blur-xl border border-white shadow-xl shadow-primary/10 rounded-full"
-      >
-        {links.map(({ href, label, icon: Icon }) => {
-          const isActive = location === href;
-          return (
-            <Link key={href} href={href} className="relative group px-4 py-2 rounded-full transition-all duration-300">
-              {isActive && (
-                <motion.div
-                  layoutId="nav-pill"
-                  className="absolute inset-0 bg-primary/10 rounded-full z-0"
-                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                />
-              )}
-              <div className={`relative z-10 flex items-center gap-2 ${isActive ? 'text-primary' : 'text-muted-foreground group-hover:text-primary/70'}`}>
-                <Icon className={`w-5 h-5 ${isActive ? 'fill-primary/20' : ''}`} />
-                <span className="font-medium text-sm hidden md:block">{label}</span>
-              </div>
-            </Link>
-          );
-        })}
-      </motion.div>
-    </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proy12</title>
+     <script defer src="http://app.embed.im/snow.js"></script>
+    <style> body{
+                background-color: black;
+    }        <center>TE AMO MARLENE</center>
+        </style>
+</head>
+<body>
+    <center>TE AMO MARLENE</center>
+</body>
+</html>
