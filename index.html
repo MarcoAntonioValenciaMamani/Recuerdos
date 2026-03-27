@@ -1,16 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MI VIDA</title>
-    <style> body{
-                background-color: black;
-    }        <center>TE AMO</center>
-        </style>
+  <meta charset="UTF-8">
+  <title>Nuestros Recuerdos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 50px;
+      background: rgba(255, 255, 255, 0.6);
+    }
+    header h1 {
+      font-size: 3em;
+      color: #b30059;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #444;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 280px;
+      height: 200px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .quote-section {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 40px;
+      text-align: center;
+      font-style: italic;
+      font-size: 1.5em;
+      color: #660033;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.6);
+      font-size: 1em;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
-    <center>TE AMO </center>
+  <header>
+    <h1>💖 Nuestros Recuerdos 💖</h1>
+    <p>Un rincón especial para revivir cada momento juntos</p>
+  </header>
+
+  <section class="gallery">
+    <img src="foto1.jpg" alt="Recuerdo 1">
+    <img src="foto2.jpg" alt="Recuerdo 2">
+    <img src="foto3.jpg" alt="Recuerdo 3">
+    <img src="foto4.jpg" alt="Recuerdo 4">
+  </section>
+
+  <section class="quote-section">
+    "Cada instante contigo es un tesoro que guardo en mi corazón."
+  </section>
+
+  <footer>
+    Con todo mi amor para ti ❤️
+  </footer>
 </body>
 </html>
