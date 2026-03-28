@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Nelly y Marco</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -13,23 +14,26 @@
     }
     header {
       text-align: center;
-      padding: 50px;
+      padding: 40px 20px;
       animation: fadeIn 3s ease-in-out;
     }
     header h1 {
-      font-size: 4em;
+      font-size: 3em;
       color: #b30059;
       text-shadow: 2px 2px 5px #fff;
       animation: heartbeat 2s infinite;
     }
+    header p {
+      font-size: 1.2em;
+    }
     .carta {
       max-width: 800px;
       margin: auto;
-      background: rgba(255,255,255,0.8);
-      padding: 40px;
+      background: rgba(255,255,255,0.85);
+      padding: 30px;
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      font-size: 1.3em;
+      font-size: 1.1em;
       line-height: 1.8em;
       animation: slideUp 2s ease;
     }
@@ -42,7 +46,7 @@
     footer {
       text-align: center;
       padding: 20px;
-      font-size: 1.1em;
+      font-size: 1em;
       background: rgba(255,255,255,0.6);
       margin-top: 40px;
     }
@@ -65,6 +69,28 @@
       0% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
       100% { transform: translateY(0); }
+    }
+    /* Corazones cayendo */
+    .heart {
+      position: fixed;
+      top: -10px;
+      color: #ff3366;
+      font-size: 24px;
+      animation: fall 6s linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+    /* Responsividad */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+      .carta {
+        font-size: 1em;
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -95,11 +121,26 @@
     Nuestro amor es mi canción favorita 🎶
   </footer>
 
-  <!-- Música de fondo (puedes cambiar el archivo por tu canción preferida en formato mp3) -->
+  <!-- Música de fondo -->
   <audio autoplay loop>
     <source src="tuCancion.mp3" type="audio/mpeg">
     Tu navegador no soporta audio.
   </audio>
+
+  <!-- Corazones cayendo -->
+  <script>
+    function crearCorazon() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤";
+      heart.style.left = Math.random() * window.innerWidth + "px";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+    setInterval(crearCorazon, 500);
+  </script>
 </body>
 </html>
-
