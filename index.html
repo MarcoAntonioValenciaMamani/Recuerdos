@@ -2,81 +2,104 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Nuestros Recuerdos</title>
+  <title>Nelly y Marco</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #ffdde1, #ee9ca7);
-      color: #333;
+      font-family: 'Segoe UI', cursive;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      color: #4a0033;
+      overflow-x: hidden;
     }
     header {
       text-align: center;
       padding: 50px;
-      background: rgba(255, 255, 255, 0.6);
+      animation: fadeIn 3s ease-in-out;
     }
     header h1 {
-      font-size: 3em;
+      font-size: 4em;
       color: #b30059;
+      text-shadow: 2px 2px 5px #fff;
+      animation: heartbeat 2s infinite;
     }
-    header p {
-      font-size: 1.2em;
-      color: #444;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-    }
-    .gallery img {
-      width: 280px;
-      height: 200px;
-      object-fit: cover;
-      margin: 10px;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-    .quote-section {
-      background: rgba(255, 255, 255, 0.7);
+    .carta {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255,255,255,0.8);
       padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      font-size: 1.3em;
+      line-height: 1.8em;
+      animation: slideUp 2s ease;
+    }
+    .decoracion {
       text-align: center;
-      font-style: italic;
-      font-size: 1.5em;
-      color: #660033;
+      font-size: 2em;
+      margin: 20px 0;
+      animation: float 4s infinite;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background: rgba(255, 255, 255, 0.6);
-      font-size: 1em;
-      color: #444;
+      font-size: 1.1em;
+      background: rgba(255,255,255,0.6);
+      margin-top: 40px;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes slideUp {
+      from {transform: translateY(50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.1); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>💖 Nuestros Recuerdos 💖</h1>
-    <p>Un rincón especial para revivir cada momento juntos</p>
+    <h1>Nelly y Marco</h1>
+    <p>Celebrando nuestro primer mes de amor 💖</p>
   </header>
 
-  <section class="gallery">
-    <img src="foto1.jpg" alt="Recuerdo 1">
-    <img src="foto2.jpg" alt="Recuerdo 2">
-    <img src="foto3.jpg" alt="Recuerdo 3">
-    <img src="foto4.jpg" alt="Recuerdo 4">
+  <div class="decoracion">💞 💕 💞</div>
+
+  <section class="carta">
+    <p>
+      Mi amada Nelly,<br><br>
+      Hoy celebramos nuestro primer mes juntos, un mes lleno de sonrisas, abrazos y momentos que ya se han convertido en recuerdos inolvidables. 
+      Cada día contigo es un regalo que atesoro en lo más profundo de mi corazón. 
+      Gracias por tu ternura, tu paciencia y por enseñarme que el amor verdadero se construye con pequeños detalles y grandes sentimientos.<br><br>
+      Este es solo el inicio de una historia hermosa que quiero escribir contigo, día tras día, mes tras mes, año tras año. 
+      Te prometo seguir cuidando de ti, apoyándote y amándote con toda mi alma.<br><br>
+      Con todo mi amor,<br>
+      Marco
+    </p>
   </section>
 
-  <section class="quote-section">
-    "Cada instante contigo es un tesoro que guardo en mi corazón."
-  </section>
+  <div class="decoracion">💞 💕 💞</div>
 
   <footer>
-    Con todo mi amor para ti ❤️
+    Nuestro amor es mi canción favorita 🎶
   </footer>
+
+  <!-- Música de fondo (puedes cambiar el archivo por tu canción preferida en formato mp3) -->
+  <audio autoplay loop>
+    <source src="tuCancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
 </body>
 </html>
+
